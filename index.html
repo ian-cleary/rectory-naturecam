@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rectory Naturecam — wildlife on the trail camera at The Old Rectory</title>
+<meta name="description" content="Wildlife caught by the NatureSpy trail camera in the garden at The Old Rectory, Manton, 16 May – 2 July 2026.">
+<style>
+:root{--cream:#f6f1e7;--ink:#2e2a24;--green:#2f4f2f;--bark:#6b4a2f;--sage:#8a9a7b;--card:#fffdf6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.55 Georgia,serif}
+a{color:var(--green)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px 60px}
+header.mast{background:var(--green);color:var(--cream);padding:34px 0 26px;border-bottom:5px solid var(--bark)}
+header.mast h1{margin:0;font:700 44px/1.05 Georgia,serif;letter-spacing:.5px}
+header.mast p{margin:8px 0 0;font-size:19px;opacity:.92}
+h2{font:700 30px/1.2 Georgia,serif;color:var(--green);border-bottom:3px solid var(--green);padding-bottom:6px;margin:44px 0 18px}
+h3{font:700 22px/1.3 Georgia,serif;color:var(--green);margin:26px 0 8px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 6px}
+.stat{flex:1 1 180px;background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:12px 14px;text-align:center}
+.stat b{display:block;font-size:30px;color:var(--green)}
+.stat span{font-size:14px}
+.searchbox{margin:26px 0 6px}
+.searchbox input{width:100%;font:18px Georgia,serif;padding:14px 16px;border:2px solid var(--ink);border-radius:8px;background:var(--card);color:var(--ink)}
+.searchbox p{margin:6px 2px 0;font-size:14px;color:#5a5245}
+.filters{display:flex;gap:8px;margin:14px 0 4px}
+.filters button{font:16px Georgia,serif;padding:8px 16px;border:2px solid var(--ink);border-radius:20px;background:var(--card);cursor:pointer}
+.filters button.on{background:var(--green);color:var(--cream)}
+#nomatch{display:none;font-size:18px;padding:18px;background:var(--card);border:2px solid var(--ink);border-radius:6px;margin:18px 0}
+.hero{margin:26px 0 6px}
+.cam{margin:0 0 14px;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:#111}
+.cam img{display:block;width:100%;height:auto}
+.cam figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;background:var(--ink);color:var(--cream);padding:8px 12px;font-size:14px}
+.cam figcaption .fname{font-weight:700}
+.story{background:var(--green);color:var(--cream);border-radius:8px;padding:22px 22px 10px;margin:26px 0}
+.story h3{color:var(--cream);margin-top:0}
+.story .cam{border-color:var(--cream)}
+.story .frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.species{background:var(--card);border:2px solid var(--ink);border-radius:8px;margin:0 0 22px;overflow:hidden}
+.species>header{display:flex;align-items:center;gap:14px;background:var(--plate);color:#fff;padding:12px 16px}
+.species>header .glyph{flex:0 0 74px;width:74px;height:56px;background:var(--cream);border:2px solid var(--ink);border-radius:6px;padding:4px}
+.species>header .glyph svg{width:100%;height:100%}
+.species>header .sname{flex:1;font-size:24px;font-weight:700}
+.species>header .sname .latin{font-size:15px;font-weight:400;opacity:.9}
+.species>header .count{font-size:14px;background:rgba(0,0,0,.28);border-radius:14px;padding:4px 10px;white-space:nowrap}
+.species .blurb,.species .dates,.species .caveat,.species .nophoto{padding:0 16px}
+.species .blurb{margin:14px 0 6px}
+.species .caveat{color:#8a5a00;font-style:italic;margin:4px 0}
+.species .dates{color:#5a5245;font-size:15px;margin:6px 0 12px}
+.species .frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;padding:0 16px}
+.species .frames .cam{margin:0}
+.videos{padding:4px 16px 0}
+.videos h4{margin:10px 0 4px;color:var(--green)}
+.videos ul,.log{margin:4px 0 12px;padding-left:22px}
+.videos li,.log li{margin:3px 0}
+.species details{margin:0 16px 16px;border-top:1px solid #d8cfb8;padding-top:10px}
+.species details summary{cursor:pointer;font-weight:700;color:var(--green)}
+.species details .note{font-size:13px;color:#5a5245}
+.about p,.tips li,.caveats li{max-width:760px}
+.tips ul,.caveats ul{padding-left:22px}
+footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-size:14px;color:#5a5245}
+@media(max-width:640px){header.mast h1{font-size:32px}.species>header .sname{font-size:20px}.species>header .glyph{flex-basis:56px;width:56px;height:44px}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap" style="padding-bottom:0">
+<h1>Rectory Naturecam</h1>
+<p>Wildlife on the trail camera in the garden at The Old Rectory, Manton — 16 May to 2 July 2026</p>
+</div></header>
+<main class="wrap">
+
+<div class="stats">
+<div class="stat"><b>2,775</b><span>files recorded</span></div>
+<div class="stat"><b>250</b><span>wildlife files</span></div>
+<div class="stat"><b>12</b><span>species</span></div>
+<div class="stat"><b>27</b><span>video clips</span></div>
+</div>
+
+<div class="hero">
+<figure class="cam"><img src="images/owl-hero.jpg" alt="Tawny owl facing the camera on the lawn at night">
+<figcaption><span class="fname">IMAG1733.JPG</span><span class="fdate">Tawny owl facing the camera, staring straight down the lens — 19 Jun 2026, 22:12. The hero shot.</span></figcaption></figure>
+</div>
+
+<div class="searchbox">
+<input id="q" type="search" placeholder="Search by visitor — try owl, deer, pigeon, fox…" aria-label="Search by visitor">
+<p>Search filters the species below by name. Household captures (people, the dog, the cats) are not shown on this site.</p>
+</div>
+<div class="filters">
+<button data-f="all" class="on">All visitors</button>
+<button data-f="Regular">Regular</button>
+<button data-f="Unusual">Unusual</button>
+</div>
+<p id="nomatch">No visitors match that search.</p>
+
+<section class="story">
+<h3>The big night — 17–18 June</h3>
+<p>Five wild visitors in one night, the busiest of the whole 48 days. Two owls on the lawn together at 23:37. Two hedgehogs together at 23:55. A pheasant asleep on the lawn at 00:25. An owl in flight at 02:49. And at 04:19 a muntjac by the willow — chased off by the household dog a minute later.</p>
+<div class="frames">
+<figure class="cam"><img src="images/owl-two.jpg" alt="Two owls on the lawn, a third in flight" loading="lazy"><figcaption><span class="fname">IMAG1558.JPG</span><span class="fdate">Two owls on the lawn, a third in flight — 17 Jun 2026, 23:37</span></figcaption></figure>
+<figure class="cam"><img src="images/hedgehog-two.jpg" alt="Two hedgehogs on the lawn" loading="lazy"><figcaption><span class="fname">IMAG1567.JPG</span><span class="fdate">Two hedgehogs on the lawn — 17 Jun 2026, 23:55</span></figcaption></figure>
+<figure class="cam"><img src="images/pheasant-roost.jpg" alt="Pheasant roosting on the lawn at night" loading="lazy"><figcaption><span class="fname">IMAG1576.JPG</span><span class="fdate">Pheasant roosting on the lawn — 18 Jun 2026, 00:25</span></figcaption></figure>
+</div>
+</section>
+
+<h2 id="regular">Regular visitors</h2>
+<article class="species" data-search="woodpigeon columba palumbus pigeon regular">
+  <header style="--plate:#7a8a94">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="woodpigeon"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="58" cy="56" rx="34" ry="24" fill="#7a8a94"/><circle cx="88" cy="34" r="15" fill="#7a8a94"/><ellipse cx="80" cy="40" rx="6" ry="9" fill="#f6f1e7"/><circle cx="92" cy="30" r="2.5" fill="#2e2a24"/><path d="M102 34 l8 3 -8 3 Z" fill="#d97b2f"/><path d="M30 60 q-14 6 -18 16 M30 66 q-12 8 -14 18" fill="none"/><path d="M48 74 l-4 10 M62 76 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Woodpigeon</span> <i class="latin">Columba palumbus</i></span>
+    <span class="count">112 files · 23 days</span>
+  </header>
+  <p class="blurb">The garden's most faithful visitor — here on 23 of the 48 days, usually in ones and twos on the lawn, sometimes in pairs on the gate. Often the bird that sets the camera off in the morning.</p>
+  
+  <p class="dates">Seen Sun 17 May – Sun 28 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/pigeon-pair.jpg" alt="Two woodpigeons on the lawn — 19 May 2026, 12:46" loading="lazy"><figcaption><span class="fname">IMAG0134.JPG</span><span class="fdate">Two woodpigeons on the lawn — 19 May 2026, 12:46</span></figcaption></figure><figure class="cam"><img src="images/pigeon-landing.jpg" alt="Woodpigeon landing, wings spread — 19 May 2026, 12:46" loading="lazy"><figcaption><span class="fname">IMAG0133.JPG</span><span class="fdate">Woodpigeon landing, wings spread — 19 May 2026, 12:46</span></figcaption></figure></div>
+  <div class="videos"><h4>Video clips (7)</h4><ul><li><a href="https://drive.google.com/file/d/1huXtt8kaW0K-fAVqCOZuyN1v488BkP8j/view" target="_blank" rel="noopener">▶ IMAG0135.MP4</a> — Tue 19 May</li><li><a href="https://drive.google.com/file/d/1iT72D6FWpmEyzt3zkByoQ4MT0A66GS0R/view" target="_blank" rel="noopener">▶ IMAG0606.MP4</a> — Tue 2 Jun</li><li><a href="https://drive.google.com/file/d/1SNxDN7xjifaMYbhTQz0yXXMgm9Fu_h3z/view" target="_blank" rel="noopener">▶ IMAG0639.MP4</a> — Wed 3 Jun</li><li><a href="https://drive.google.com/file/d/1ubHTA6WhYIHoktI8O8HIMoh-KZxVvdMu/view" target="_blank" rel="noopener">▶ IMAG0678.MP4</a> — Wed 3 Jun</li><li><a href="https://drive.google.com/file/d/17e9_11tt2lluJmVooGiswFo-k3m6Xt8P/view" target="_blank" rel="noopener">▶ IMAG0681.MP4</a> — Wed 3 Jun</li><li><a href="https://drive.google.com/file/d/11pQ5PbVL2LMLRoLrRHjpYRAwUQrv5NvI/view" target="_blank" rel="noopener">▶ IMAG0690.MP4</a> — Thu 4 Jun</li><li><a href="https://drive.google.com/file/d/1HLuy4kjAIIUUD3QySyKzvLnDJzVRbsA_/view" target="_blank" rel="noopener">▶ IMAG1938.MP4</a> — Tue 23 Jun</li></ul></div>
+  <details><summary>Visit log (112 files)</summary><ul class="log"><li><b>Sun 17 May</b> — IMAG0082.JPG 17:45</li><li><b>Tue 19 May</b> — IMAG0135.MP4 ▶ video, IMAG0130.JPG 11:16, IMAG0131.JPG 11:16, IMAG0133.JPG 12:46, IMAG0134.JPG 12:46, IMAG0136.JPG 13:01</li><li><b>Wed 20 May</b> — IMAG0184.JPG 18:25, IMAG0185.JPG 18:25</li><li><b>Mon 25 May</b> — IMAG0304.JPG 10:15:02, IMAG0305.JPG 10:15:02</li><li><b>Tue 26 May</b> — IMAG0328.JPG 06:03:26, IMAG0329.JPG 06:03:27</li><li><b>Sat 30 May</b> — IMAG0493.JPG 08:23:25, IMAG0494.JPG 08:23:26</li><li><b>Sun 31 May</b> — IMAG0520.JPG 10:26:52, IMAG0521.JPG 10:26:53</li><li><b>Tue 2 Jun</b> — IMAG0606.MP4 ▶ video, IMAG0604.JPG 08:08:24, IMAG0605.JPG 08:08:24</li><li><b>Wed 3 Jun</b> — IMAG0639.MP4 ▶ video, IMAG0678.MP4 ▶ video, IMAG0681.MP4 ▶ video, IMAG0640.JPG 09:49:54, IMAG0641.JPG 09:49:55</li><li><b>Thu 4 Jun</b> — IMAG0690.MP4 ▶ video, IMAG0676.JPG 05:59:19, IMAG0677.JPG 05:59:20, IMAG0679.JPG 06:04:11, IMAG0680.JPG 06:04:12, IMAG0685.JPG 09:13:11, IMAG0686.JPG 09:13:11, IMAG0688.JPG 09:38:04, IMAG0689.JPG 09:38:04</li><li><b>Tue 9 Jun</b> — IMAG1078.JPG 15:10, IMAG1079.JPG 15:10, IMAG1105.JPG 18:17, IMAG1106.JPG 18:17</li><li><b>Thu 11 Jun</b> — IMAG1207.JPG 19:15:50, IMAG1208.JPG 19:15:51</li><li><b>Sat 13 Jun</b> — IMAG1279.JPG 09:06:22, IMAG1280.JPG 09:06:23, IMAG1282.JPG 10:06:00, IMAG1283.JPG 10:06:01, IMAG1288.JPG 11:48:55, IMAG1289.JPG 11:48:56</li><li><b>Mon 15 Jun</b> — IMAG1426.JPG 09:34:50, IMAG1429.JPG 10:42:39, IMAG1430.JPG 10:42:39</li><li><b>Fri 19 Jun</b> — IMAG1702.JPG 12:58, IMAG1703.JPG 12:58</li><li><b>Sat 20 Jun</b> — IMAG1741.JPG 14:59, IMAG1742.JPG 14:59, IMAG1744.JPG 15:01, IMAG1745.JPG 15:02</li><li><b>Mon 22 Jun</b> — IMAG1834.JPG 12:20, IMAG1835.JPG 12:20</li><li><b>Tue 23 Jun</b> — IMAG1938.MP4 ▶ video, IMAG1876.JPG 10:22, IMAG1877.JPG 10:22, IMAG1891.JPG 12:13, IMAG1892.JPG 12:13, IMAG1909.JPG 16:14, IMAG1910.JPG 16:14</li><li><b>Wed 24 Jun</b> — IMAG1936.JPG 06:19, IMAG1937.JPG 06:19, IMAG1942.JPG 08:02, IMAG1943.JPG 08:02:41, IMAG1951.JPG 11:07:15</li><li><b>Thu 25 Jun</b> — IMAG2032.JPG 06:45:54, IMAG2033.JPG 06:45:55, IMAG2038.JPG 09:19:26, IMAG2056.JPG 12:55:16, IMAG2057.JPG 12:55:17, IMAG2059.JPG 13:02:02, IMAG2060.JPG 13:02:03</li><li><b>Fri 26 Jun</b> — IMAG2110.JPG 08:47:43, IMAG2111.JPG 08:47:44, IMAG2134.JPG 14:28:40, IMAG2135.JPG 14:28:41, IMAG2137.JPG 14:29:18, IMAG2138.JPG 14:29:19</li><li><b>Sat 27 Jun</b> — IMAG2164.JPG 06:50:33, IMAG2165.JPG 06:50:34, IMAG2173.JPG 09:00:18, IMAG2174.JPG 09:00:19, IMAG2185.JPG 10:06:27, IMAG2186.JPG 10:06:27, IMAG2188.JPG 10:11:10, IMAG2189.JPG 10:11:11, IMAG2191.JPG 10:17:11, IMAG2192.JPG 10:17:12, IMAG2194.JPG 10:33:57, IMAG2195.JPG 10:33:57, IMAG2215.JPG 11:40:25, IMAG2216.JPG 11:40:26, IMAG2218.JPG 11:43:36, IMAG2219.JPG 11:43:37, IMAG2221.JPG 11:54:32, IMAG2222.JPG 11:54:33, IMAG2224.JPG 12:05:21, IMAG2225.JPG 12:05:22</li><li><b>Sun 28 Jun</b> — IMAG2236.JPG 07:06:01, IMAG2237.JPG 07:06:02, IMAG2242.JPG 09:05:06, IMAG2243.JPG 09:05:06, IMAG2287.JPG 11:40:57, IMAG2288.JPG 11:40:57, IMAG2290.JPG 11:46:17, IMAG2291.JPG 11:46:18, IMAG2293.JPG 11:51:33, IMAG2294.JPG 11:51:34</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="blackbird turdus merula  regular">
+  <header style="--plate:#2e2a26">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="blackbird"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="56" cy="56" rx="32" ry="22" fill="#2e2a24"/><circle cx="84" cy="36" r="14" fill="#2e2a24"/><circle cx="88" cy="32" r="2.5" fill="#f6f1e7"/><path d="M97 36 l9 3 -9 4 Z" fill="#d97b2f"/><path d="M28 58 q-12 6 -16 16 M28 64 q-10 8 -12 16" fill="none"/><path d="M48 74 l-4 10 M60 76 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Blackbird</span> <i class="latin">Turdus merula</i></span>
+    <span class="count">30 files · 12 days</span>
+  </header>
+  <p class="blurb">A regular from late May, males and females both, working the lawn through the day. One male was caught carrying a red berry on 23 June.</p>
+  
+  <p class="dates">Seen Tue 26 May – Tue 30 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/blackbird-hen.jpg" alt="Female blackbird on the lawn — 15 Jun 2026, 12:22" loading="lazy"><figcaption><span class="fname">IMAG1432.JPG</span><span class="fdate">Female blackbird on the lawn — 15 Jun 2026, 12:22</span></figcaption></figure><figure class="cam"><img src="images/blackbird-male.jpg" alt="Male blackbird, tail up, in the plants — 24 Jun 2026, 07:05" loading="lazy"><figcaption><span class="fname">IMAG1939.JPG</span><span class="fdate">Male blackbird, tail up, in the plants — 24 Jun 2026, 07:05</span></figcaption></figure></div>
+  <div class="videos"><h4>Video clips (11)</h4><ul><li><a href="https://drive.google.com/file/d/19WS1dISCGxqspwY_kjSOWd5JyTmRpMvz/view" target="_blank" rel="noopener">▶ IMAG0345.MP4</a> — Tue 26 May</li><li><a href="https://drive.google.com/file/d/1OD8HOTVgjsQNe-_GA0GYBiJI-QR1a9Us/view" target="_blank" rel="noopener">▶ IMAG0945.MP4</a> — Sat 6 Jun</li><li><a href="https://drive.google.com/file/d/18UB2ed8swaZvVJYPdRSzSanEIKXXW7wz/view" target="_blank" rel="noopener">▶ IMAG1107.MP4</a> — Tue 9 Jun</li><li><a href="https://drive.google.com/file/d/18jIoTTs5KQI8d0Zat19GFpVcmFH7AYU_/view" target="_blank" rel="noopener">▶ IMAG1431.MP4</a> — Mon 15 Jun</li><li><a href="https://drive.google.com/file/d/1ShFAa1AZkX9b3cX7qEV636UsFnxiZQQ-/view" target="_blank" rel="noopener">▶ IMAG1434.MP4</a> — Mon 15 Jun</li><li><a href="https://drive.google.com/file/d/1mlnmGaWSJYcBHgULKrfnpE9rlNZdayTb/view" target="_blank" rel="noopener">▶ IMAG1944.MP4</a> — Wed 24 Jun</li><li><a href="https://drive.google.com/file/d/1DqTXUY9O-fjoGVq8kf5LFN1hSOGFOgVt/view" target="_blank" rel="noopener">▶ IMAG2058.MP4</a> — Thu 25 Jun</li><li><a href="https://drive.google.com/file/d/1KfqPPytW_vwdeJV5G2se3KndZRFIvrSS/view" target="_blank" rel="noopener">▶ IMAG2112.MP4</a> — Thu 25 Jun</li><li><a href="https://drive.google.com/file/d/1E14L69_Wh9xElEvqHrO5tuVvgtmABUO8/view" target="_blank" rel="noopener">▶ IMAG2238.MP4</a> — Sun 28 Jun</li><li><a href="https://drive.google.com/file/d/1dYMAixEgoTmf3CFjFO-vA7cfkx8FHfW4/view" target="_blank" rel="noopener">▶ IMAG2256.MP4</a> — Sun 28 Jun</li><li><a href="https://drive.google.com/file/d/13p-18imUdWxgv5IyIm5HTaoiLvO5ieht/view" target="_blank" rel="noopener">▶ IMAG2499.MP4</a> — Tue 30 Jun</li></ul></div>
+  <details><summary>Visit log (30 files)</summary><ul class="log"><li><b>Tue 26 May</b> — IMAG0345.MP4 ▶ video</li><li><b>Wed 3 Jun</b> — IMAG0643.JPG 10:01:22, IMAG0644.JPG 10:01:23</li><li><b>Sat 6 Jun</b> — IMAG0945.MP4 ▶ video</li><li><b>Tue 9 Jun</b> — IMAG1107.MP4 ▶ video</li><li><b>Mon 15 Jun</b> — IMAG1431.MP4 ▶ video, IMAG1434.MP4 ▶ video, IMAG1432.JPG 12:22:34, IMAG1433.JPG 12:22:34</li><li><b>Fri 19 Jun</b> — IMAG1699.JPG 09:34, IMAG1700.JPG 09:34</li><li><b>Tue 23 Jun</b> — IMAG1903.JPG 15:06, IMAG1904.JPG 15:06</li><li><b>Wed 24 Jun</b> — IMAG1944.MP4 ▶ video, IMAG1939.JPG 07:05</li><li><b>Thu 25 Jun</b> — IMAG2058.MP4 ▶ video, IMAG2112.MP4 ▶ video</li><li><b>Fri 26 Jun</b> — IMAG2129.JPG 13:44:48</li><li><b>Sun 28 Jun</b> — IMAG2238.MP4 ▶ video, IMAG2256.MP4 ▶ video, IMAG2236.JPG 07:06:01, IMAG2248.JPG 09:26:27, IMAG2249.JPG 09:26:28, IMAG2254.JPG 09:55:32, IMAG2255.JPG 09:55:33, IMAG2293.JPG 11:51:33, IMAG2294.JPG 11:51:34, IMAG2299.JPG 12:03:18, IMAG2300.JPG 12:03:19</li><li><b>Tue 30 Jun</b> — IMAG2499.MP4 ▶ video</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="pheasant phasianus colchicus  regular">
+  <header style="--plate:#8a5a2e">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="pheasant"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M46 56 L8 66 L8 76 L46 64 Z" fill="#8a5a2e"/><ellipse cx="66" cy="54" rx="28" ry="20" fill="#8a5a2e"/><circle cx="92" cy="36" r="13" fill="#3f6b4f"/><circle cx="96" cy="32" r="2.5" fill="#f6f1e7"/><path d="M104 36 l8 3 -8 3 Z" fill="#d97b2f"/><circle cx="98" cy="44" r="3" fill="#c0392b"/><path d="M58 70 l-4 10 M70 72 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Pheasant</span> <i class="latin">Phasianus colchicus</i></span>
+    <span class="count">24 files · 7 days</span>
+  </header>
+  <p class="blurb">Cock and hen both, by day — and, remarkably, roosting on the lawn and in the trees at night. The garden's most surprising regular.</p>
+  
+  <p class="dates">Seen Mon 18 May – Thu 18 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/pheasant-cock.jpg" alt="Cock pheasant by the big tree — 18 May 2026, 14:27" loading="lazy"><figcaption><span class="fname">IMAG0112.JPG</span><span class="fdate">Cock pheasant by the big tree — 18 May 2026, 14:27</span></figcaption></figure><figure class="cam"><img src="images/pheasant-roost.jpg" alt="Pheasant roosting on the lawn at night — 18 Jun 2026, 00:25" loading="lazy"><figcaption><span class="fname">IMAG1576.JPG</span><span class="fdate">Pheasant roosting on the lawn at night — 18 Jun 2026, 00:25</span></figcaption></figure><figure class="cam"><img src="images/pheasant-tree.jpg" alt="Pheasant roosting in the left tree — 18 Jun 2026, 23:03" loading="lazy"><figcaption><span class="fname">IMAG1681.JPG</span><span class="fdate">Pheasant roosting in the left tree — 18 Jun 2026, 23:03</span></figcaption></figure></div>
+  <div class="videos"><h4>Video clips (4)</h4><ul><li><a href="https://drive.google.com/file/d/1yLP7NOPe2D2MRSyR-Drlk3vFyzL3Emib/view" target="_blank" rel="noopener">▶ IMAG0099.MP4</a> — Mon 18 May</li><li><a href="https://drive.google.com/file/d/1HIBrMd9K1vL5RYwo7aM3VhJOEoKUqJt7/view" target="_blank" rel="noopener">▶ IMAG0441.MP4</a> — Fri 29 May, 07:58</li><li><a href="https://drive.google.com/file/d/1-sqKTHnxEbbwxpxDPWiRUnbkuozrXRdR/view" target="_blank" rel="noopener">▶ IMAG0618.MP4</a> — Tue 2 Jun</li><li><a href="https://drive.google.com/file/d/1IBP1DapP0VfiDEsutfQPPDTxBFtZrpra/view" target="_blank" rel="noopener">▶ IMAG0648.MP4</a> — Wed 3 Jun</li></ul></div>
+  <details><summary>Visit log (24 files)</summary><ul class="log"><li><b>Mon 18 May</b> — IMAG0099.MP4 ▶ video, IMAG0097.JPG 10:04, IMAG0098.JPG 10:04, IMAG0112.JPG 14:27, IMAG0113.JPG 14:27, IMAG0115.JPG 14:32, IMAG0116.JPG 14:32</li><li><b>Mon 25 May</b> — IMAG0292.JPG 06:39:42, IMAG0293.JPG 06:39:43</li><li><b>Fri 29 May</b> — IMAG0441.MP4 07:58 ▶ video, IMAG0439.JPG 07:58:24, IMAG0440.JPG 07:58:25</li><li><b>Tue 2 Jun</b> — IMAG0618.MP4 ▶ video</li><li><b>Wed 3 Jun</b> — IMAG0648.MP4 ▶ video, IMAG0646.JPG 12:03:00, IMAG0647.JPG 12:03:01</li><li><b>Wed 17 Jun</b> — IMAG1519.JPG 13:16:15, IMAG1520.JPG 13:16:16</li><li><b>Thu 18 Jun</b> — IMAG1576.JPG 00:25:38, IMAG1577.JPG 00:25:39, IMAG1585.JPG 00:33:49, IMAG1586.JPG 00:33:49, IMAG1681.JPG 23:04, IMAG1682.JPG 23:04</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="magpie pica pica  regular">
+  <header style="--plate:#2e2a26">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="magpie"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M44 54 L6 78 L14 82 L50 62 Z" fill="#2e2a24"/><ellipse cx="64" cy="52" rx="28" ry="20" fill="#f6f1e7"/><path d="M44 44 q16 -12 34 0 q-6 14 -20 14 q-12 0 -14 -14 Z" fill="#2e2a24"/><circle cx="90" cy="34" r="12" fill="#2e2a24"/><circle cx="94" cy="30" r="2.5" fill="#f6f1e7"/><path d="M101 34 l8 3 -8 3 Z" fill="#2e2a24"/><path d="M56 68 l-4 10 M68 70 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Magpie</span> <i class="latin">Pica pica</i></span>
+    <span class="count">4 files · 2 days</span>
+  </header>
+  <p class="blurb">Two visits, a week apart, both on the lawn in the morning.</p>
+  
+  <p class="dates">Seen Mon 25 May – Sat 30 May.</p>
+  <div class="frames"><figure class="cam"><img src="images/magpie-lawn.jpg" alt="Magpie on the lawn — 25 May 2026, 10:15" loading="lazy"><figcaption><span class="fname">IMAG0304.JPG</span><span class="fdate">Magpie on the lawn — 25 May 2026, 10:15</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (4 files)</summary><ul class="log"><li><b>Mon 25 May</b> — IMAG0304.JPG 10:15:02, IMAG0305.JPG 10:15:02</li><li><b>Sat 30 May</b> — IMAG0484.JPG 07:38:42, IMAG0499.JPG 09:08:25</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="carrion crow corvus corone carrion crow regular">
+  <header style="--plate:#2e2a26">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="carrion crow"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="56" cy="56" rx="32" ry="22" fill="#2e2a24"/><circle cx="84" cy="36" r="14" fill="#2e2a24"/><circle cx="88" cy="32" r="2.5" fill="#f6f1e7"/><path d="M96 36 l12 4 -12 4 Z" fill="#2e2a24"/><path d="M28 58 q-12 6 -16 16 M28 64 q-10 8 -12 16" fill="none"/><path d="M48 74 l-4 10 M60 76 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Carrion crow</span> <i class="latin">Corvus corone</i></span>
+    <span class="count">2 files · 1 day</span>
+  </header>
+  <p class="blurb">A single crow, one morning in late May, striding across the lawn.</p>
+  
+  <p class="dates">Seen Tue 26 May.</p>
+  <div class="frames"><figure class="cam"><img src="images/crow-lawn.jpg" alt="Carrion crow on the lawn — 26 May 2026, 11:34" loading="lazy"><figcaption><span class="fname">IMAG0343.JPG</span><span class="fdate">Carrion crow on the lawn — 26 May 2026, 11:34</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (2 files)</summary><ul class="log"><li><b>Tue 26 May</b> — IMAG0343.JPG 11:34:51, IMAG0344.JPG 11:34:52</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="song thrush turdus philomelos song thrush regular">
+  <header style="--plate:#8a6b4a">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="song thrush"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="56" cy="56" rx="32" ry="22" fill="#8a6b4a"/><circle cx="84" cy="36" r="13" fill="#8a6b4a"/><circle cx="88" cy="32" r="2.5" fill="#2e2a24"/><path d="M96 36 l9 3 -9 3 Z" fill="#d97b2f"/><circle cx="52" cy="58" r="2" fill="#2e2a24"/><circle cx="62" cy="62" r="2" fill="#2e2a24"/><circle cx="56" cy="66" r="2" fill="#2e2a24"/><circle cx="68" cy="56" r="2" fill="#2e2a24"/><path d="M48 74 l-4 10 M60 76 l-2 10" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Song thrush</span> <i class="latin">Turdus philomelos</i></span>
+    <span class="count">1 file · 1 day</span>
+  </header>
+  <p class="blurb">One sighting, 24 June — a small thrush-like bird on the lawn beside a woodpigeon. The identification is a best guess, not a certainty.</p>
+  <p class="caveat">⚠ Identification tentative.</p>
+  <p class="dates">Seen Wed 24 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/thrush-lawn.jpg" alt="Song thrush on the lawn — 24 Jun 2026, 08:02" loading="lazy"><figcaption><span class="fname">IMAG1943.JPG</span><span class="fdate">Song thrush on the lawn — 24 Jun 2026, 08:02</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (1 files)</summary><ul class="log"><li><b>Wed 24 Jun</b> — IMAG1943.JPG 08:02:41</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="small bird — unidentified  small bird unidentified regular">
+  <header style="--plate:#7a6a4f">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="small bird"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="58" cy="56" rx="24" ry="17" fill="#7a6a4f"/><circle cx="80" cy="42" r="11" fill="#7a6a4f"/><circle cx="84" cy="38" r="2.5" fill="#2e2a24"/><path d="M90 42 l8 3 -8 3 Z" fill="#d97b2f"/><path d="M40 58 q-10 5 -14 12" fill="none"/><path d="M52 70 l-3 9 M62 72 l-2 9" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Small bird — unidentified</span></span>
+    <span class="count">3 files · 3 days</span>
+  </header>
+  <p class="blurb">Two small birds the camera caught too briefly to name, and one blurred bird in flight that may be a pigeon or a dove. They stay unidentified rather than guessed.</p>
+  
+  <p class="dates">Seen Wed 20 May – Wed 17 Jun.</p>
+  <div class="frames"><p class="nophoto">No still photograph was clear enough to show — this visitor is only on video, below.</p></div>
+  <div class="videos"><h4>Video clips (2)</h4><ul><li><a href="https://drive.google.com/file/d/1HmI_7NQr-rR2nV1d6QD_U5m7mvfZc45E/view" target="_blank" rel="noopener">▶ IMAG0171.MP4</a> — Wed 20 May</li><li><a href="https://drive.google.com/file/d/1aBN3n7EM3I6GeWIoPWXz4JbFJA599oTW/view" target="_blank" rel="noopener">▶ IMAG1587.MP4</a> — Wed 17 Jun</li></ul></div>
+  <details><summary>Visit log (3 files)</summary><ul class="log"><li><b>Wed 20 May</b> — IMAG0171.MP4 ▶ video</li><li><b>Mon 15 Jun</b> — IMAG1420.JPG 05:10:13</li><li><b>Wed 17 Jun</b> — IMAG1587.MP4 ▶ video</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+
+<h2 id="unusual">Unusual visitors</h2>
+<article class="species" data-search="owl strix aluco (probably)  unusual">
+  <header style="--plate:#b98a4a">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="owl"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M38 22 L46 8 L54 20 Z" fill="#b98a4a"/><path d="M66 20 L74 8 L82 22 Z" fill="#b98a4a"/><ellipse cx="60" cy="52" rx="30" ry="32" fill="#b98a4a"/><circle cx="48" cy="46" r="10" fill="#f6f1e7"/><circle cx="72" cy="46" r="10" fill="#f6f1e7"/><circle cx="48" cy="46" r="4" fill="#2e2a24"/><circle cx="72" cy="46" r="4" fill="#2e2a24"/><path d="M56 56 L64 56 L60 63 Z" fill="#d97b2f"/><path d="M32 60 q-8 10 2 16 M88 60 q8 10 -2 16" fill="none"/></g></svg></span>
+    <span class="sname"><span class="t">Owl</span> <i class="latin">Strix aluco (probably)</i></span>
+    <span class="count">41 files · 8 days</span>
+  </header>
+  <p class="blurb">The star of the show. Nothing for the first month, then eight nights of owls from 17 to 26 June — hunting the lawn, twice in pairs, once in flight. The species is unconfirmed: the early frames read as barn owl, the later ones as tawny, and tawny is the likelier garden owl.</p>
+  <p class="caveat">⚠ Species unconfirmed — tawny likelier than barn.</p>
+  <p class="dates">Seen Wed 17 Jun – Fri 26 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/owl-hero.jpg" alt="Tawny owl facing the camera — 19 Jun 2026, 22:12" loading="lazy"><figcaption><span class="fname">IMAG1733.JPG</span><span class="fdate">Tawny owl facing the camera — 19 Jun 2026, 22:12</span></figcaption></figure><figure class="cam"><img src="images/owl-wings.jpg" alt="Owl with wings spread, centre lawn — 20 Jun 2026, 00:09" loading="lazy"><figcaption><span class="fname">IMAG1735.JPG</span><span class="fdate">Owl with wings spread, centre lawn — 20 Jun 2026, 00:09</span></figcaption></figure><figure class="cam"><img src="images/owl-two.jpg" alt="Two owls on the lawn, a third in flight — 17 Jun 2026, 23:37" loading="lazy"><figcaption><span class="fname">IMAG1558.JPG</span><span class="fdate">Two owls on the lawn, a third in flight — 17 Jun 2026, 23:37</span></figcaption></figure><figure class="cam"><img src="images/owl-flight.jpg" alt="Owl in flight across the garden — 18 Jun 2026, 02:49" loading="lazy"><figcaption><span class="fname">IMAG1597.JPG</span><span class="fdate">Owl in flight across the garden — 18 Jun 2026, 02:49</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (41 files)</summary><ul class="log"><li><b>Wed 17 Jun</b> — IMAG1552.JPG 23:26:45, IMAG1553.JPG 23:26:45, IMAG1555.JPG 23:29:42, IMAG1556.JPG 23:29:43, IMAG1558.JPG 23:37:11, IMAG1559.JPG 23:37:12, IMAG1564.JPG 23:47:02, IMAG1565.JPG 23:47:03</li><li><b>Thu 18 Jun</b> — IMAG1570.JPG 00:15:56, IMAG1571.JPG 00:15:56, IMAG1582.JPG 00:31:45, IMAG1583.JPG 00:31:45, IMAG1597.JPG 02:49:39, IMAG1598.JPG 02:49:40, IMAG1669.JPG 21:36, IMAG1670.JPG 21:36</li><li><b>Fri 19 Jun</b> — IMAG1732.JPG 22:12, IMAG1733.JPG 22:12</li><li><b>Sat 20 Jun</b> — IMAG1735.JPG 00:09, IMAG1736.JPG 00:09</li><li><b>Sun 21 Jun</b> — IMAG1759.JPG 02:28, IMAG1760.JPG 02:28, IMAG1801.JPG 22:17, IMAG1802.JPG 22:17</li><li><b>Wed 24 Jun</b> — IMAG2014.JPG 21:45:17, IMAG2015.JPG 21:45:17, IMAG2017.JPG 22:28:58, IMAG2018.JPG 22:28:59, IMAG2020.JPG 22:32:26, IMAG2021.JPG 22:32:27, IMAG2023.JPG 22:43:09, IMAG2024.JPG 22:43:10</li><li><b>Thu 25 Jun</b> — IMAG2074.JPG 21:34:06, IMAG2075.JPG 21:34:06, IMAG2077.JPG 21:34:54, IMAG2078.JPG 21:34:55, IMAG2080.JPG 21:37:24, IMAG2083.JPG 21:39:02, IMAG2084.JPG 21:39:03</li><li><b>Fri 26 Jun</b> — IMAG2092.JPG 02:38:49, IMAG2093.JPG 02:38:50</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="hedgehog erinaceus europaeus  unusual">
+  <header style="--plate:#7a5a3a">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="hedgehog"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M18 66 A42 36 0 0 1 102 66 Z" fill="#7a5a3a"/><path d="M30 40 l-6 -12 M45 30 l-2 -13 M60 28 v-13 M75 30 l2 -13 M90 40 l6 -12" fill="none"/><circle cx="98" cy="64" r="12" fill="#c9a37e"/><circle cx="102" cy="60" r="2.5" fill="#2e2a24"/><circle cx="110" cy="66" r="3" fill="#2e2a24"/></g></svg></span>
+    <span class="sname"><span class="t">Hedgehog</span> <i class="latin">Erinaceus europaeus</i></span>
+    <span class="count">18 files · 2 days</span>
+  </header>
+  <p class="blurb">Two nights only, 17–18 June — and on the first of them, two hedgehogs together on the lawn. The identifications are tentative: small, round, spiky shapes in night infrared.</p>
+  <p class="caveat">⚠ Identifications tentative (night infrared).</p>
+  <p class="dates">Seen Wed 17 Jun – Thu 18 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/hedgehog-two.jpg" alt="Two hedgehogs on the lawn — 17 Jun 2026, 23:55" loading="lazy"><figcaption><span class="fname">IMAG1567.JPG</span><span class="fdate">Two hedgehogs on the lawn — 17 Jun 2026, 23:55</span></figcaption></figure><figure class="cam"><img src="images/hedgehog-lawn.jpg" alt="Hedgehog crossing the lawn — 18 Jun 2026, 22:48" loading="lazy"><figcaption><span class="fname">IMAG1675.JPG</span><span class="fdate">Hedgehog crossing the lawn — 18 Jun 2026, 22:48</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (18 files)</summary><ul class="log"><li><b>Wed 17 Jun</b> — IMAG1549.JPG 23:25:39, IMAG1550.JPG 23:25:39, IMAG1561.JPG 23:46:16, IMAG1562.JPG 23:46:17, IMAG1567.JPG 23:55:56, IMAG1568.JPG 23:55:57</li><li><b>Thu 18 Jun</b> — IMAG1579.JPG 00:30:40, IMAG1580.JPG 00:30:41, IMAG1591.JPG 02:44:12, IMAG1592.JPG 02:44:12, IMAG1594.JPG 02:48:27, IMAG1595.JPG 02:48:27, IMAG1663.JPG 21:26:46, IMAG1664.JPG 21:26:46, IMAG1672.JPG 22:47, IMAG1673.JPG 22:47, IMAG1675.JPG 22:49, IMAG1676.JPG 22:49</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="muntjac deer muntiacus reevesi muntjac deer unusual">
+  <header style="--plate:#a8623a">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="muntjac deer"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M48 26 L44 12 M48 26 L56 14 M72 26 L76 12 M72 26 L64 14" fill="none"/><path d="M34 30 L26 14 L44 24 Z" fill="#a8623a"/><path d="M86 30 L94 14 L76 24 Z" fill="#a8623a"/><ellipse cx="60" cy="52" rx="24" ry="28" fill="#a8623a"/><circle cx="50" cy="48" r="3.5" fill="#2e2a24"/><circle cx="70" cy="48" r="3.5" fill="#2e2a24"/><ellipse cx="60" cy="66" rx="8" ry="6" fill="#d9b48f"/></g></svg></span>
+    <span class="sname"><span class="t">Muntjac deer</span> <i class="latin">Muntiacus reevesi</i></span>
+    <span class="count">10 files · 5 days</span>
+  </header>
+  <p class="blurb">A small, reddish deer, probably muntjac — a non-native species, now widespread. Four visits: at dusk on 2 June, overnight on 16–17 June, and again on 25 and 29 June. On 17 June the household dog chased it off at 04:20, minutes after it was photographed by the willow.</p>
+  
+  <p class="dates">Seen Tue 2 Jun – Mon 29 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/muntjac-willow.jpg" alt="Muntjac by the willow, facing the camera — 17 Jun 2026, 04:19" loading="lazy"><figcaption><span class="fname">IMAG1504.JPG</span><span class="fdate">Muntjac by the willow, facing the camera — 17 Jun 2026, 04:19</span></figcaption></figure><figure class="cam"><img src="images/muntjac-dusk.jpg" alt="Muntjac at dusk, heading for the willow — 2 Jun 2026, 19:49" loading="lazy"><figcaption><span class="fname">IMAG0616.JPG</span><span class="fdate">Muntjac at dusk, heading for the willow — 2 Jun 2026, 19:49</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (10 files)</summary><ul class="log"><li><b>Tue 2 Jun</b> — IMAG0616.JPG 19:49:34, IMAG0617.JPG 19:49:34</li><li><b>Tue 16 Jun</b> — IMAG1501.JPG 20:51:08, IMAG1502.JPG 20:51:08</li><li><b>Wed 17 Jun</b> — IMAG1504.JPG 04:19:18, IMAG1505.JPG 04:19:18</li><li><b>Thu 25 Jun</b> — IMAG2089.JPG 23:21:32, IMAG2090.JPG 23:21:32</li><li><b>Mon 29 Jun</b> — IMAG2383.JPG 05:07:48, IMAG2384.JPG 05:07:49</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="roe deer capreolus capreolus roe deer doe unusual">
+  <header style="--plate:#b08d5a">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="roe deer"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M38 34 L28 8 L46 22 Z" fill="#b08d5a"/><path d="M82 34 L92 8 L74 22 Z" fill="#b08d5a"/><ellipse cx="60" cy="54" rx="23" ry="27" fill="#b08d5a"/><circle cx="50" cy="50" r="3.5" fill="#2e2a24"/><circle cx="70" cy="50" r="3.5" fill="#2e2a24"/><ellipse cx="60" cy="68" rx="9" ry="6" fill="#e8d5b5"/></g></svg></span>
+    <span class="sname"><span class="t">Roe deer</span> <i class="latin">Capreolus capreolus</i></span>
+    <span class="count">9 files · 2 days</span>
+  </header>
+  <p class="blurb">A doe, twice — at dawn on 22 May, crossing the lawn, and in daylight on 6 June by the willow. A few deer frames are ambiguous between roe and muntjac.</p>
+  <p class="caveat">⚠ A few deer frames are ambiguous between roe and muntjac.</p>
+  <p class="dates">Seen Fri 22 May – Sat 6 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/roe-dawn.jpg" alt="Roe deer doe crossing the lawn at dawn — 22 May 2026, 04:33" loading="lazy"><figcaption><span class="fname">IMAG0196.JPG</span><span class="fdate">Roe deer doe crossing the lawn at dawn — 22 May 2026, 04:33</span></figcaption></figure><figure class="cam"><img src="images/roe-browse.jpg" alt="Roe deer doe browsing by the big tree — 22 May 2026, 04:37" loading="lazy"><figcaption><span class="fname">IMAG0199.JPG</span><span class="fdate">Roe deer doe browsing by the big tree — 22 May 2026, 04:37</span></figcaption></figure><figure class="cam"><img src="images/roe-day.jpg" alt="Roe deer doe by the willow in daylight — 6 Jun 2026, 13:17" loading="lazy"><figcaption><span class="fname">IMAG0958.JPG</span><span class="fdate">Roe deer doe by the willow in daylight — 6 Jun 2026, 13:17</span></figcaption></figure></div>
+  <div class="videos"><h4>Video clips (3)</h4><ul><li><a href="https://drive.google.com/file/d/1GyhqVtyxD9-65JYqmkewGwgsh4Mtulb7/view" target="_blank" rel="noopener">▶ IMAG0198.MP4</a> — Fri 22 May, 04:33</li><li><a href="https://drive.google.com/file/d/1fhMed5Ts-3060AFm94BK7La0NLZQhRFd/view" target="_blank" rel="noopener">▶ IMAG0201.MP4</a> — Fri 22 May, 04:37</li><li><a href="https://drive.google.com/file/d/1NS0NO2JqdsLAgzR-_0Y2oi6ZTtm5z-px/view" target="_blank" rel="noopener">▶ IMAG0960.MP4</a> — Sat 6 Jun, 13:17</li></ul></div>
+  <details><summary>Visit log (9 files)</summary><ul class="log"><li><b>Fri 22 May</b> — IMAG0196.JPG 04:33, IMAG0197.JPG 04:33, IMAG0198.MP4 04:33 ▶ video, IMAG0199.JPG 04:37, IMAG0200.JPG 04:37, IMAG0201.MP4 04:37 ▶ video</li><li><b>Sat 6 Jun</b> — IMAG0958.JPG 13:17, IMAG0959.JPG 13:17, IMAG0960.MP4 13:17 ▶ video</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+<article class="species" data-search="red fox vulpes vulpes red fox unusual">
+  <header style="--plate:#c46a2e">
+    <span class="glyph"><svg viewBox="0 0 120 90" role="img" aria-label="red fox"><g stroke="#2e2a24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M36 32 L30 6 L54 22 Z" fill="#c46a2e"/><path d="M84 32 L90 6 L66 22 Z" fill="#c46a2e"/><path d="M34 34 Q60 18 86 34 Q86 66 60 78 Q34 66 34 34 Z" fill="#c46a2e"/><path d="M46 62 Q60 56 74 62 Q74 74 60 78 Q46 74 46 62 Z" fill="#f6f1e7"/><circle cx="49" cy="44" r="3.5" fill="#2e2a24"/><circle cx="71" cy="44" r="3.5" fill="#2e2a24"/><circle cx="60" cy="66" r="3.5" fill="#2e2a24"/></g></svg></span>
+    <span class="sname"><span class="t">Red fox</span> <i class="latin">Vulpes vulpes</i></span>
+    <span class="count">2 files · 1 day</span>
+  </header>
+  <p class="blurb">One visit, 4 June at 01:32 — a fox-like shape by the willow in night infrared, bushy tail visible. Night infrared only, so the identification carries a question mark.</p>
+  <p class="caveat">⚠ Night infrared only.</p>
+  <p class="dates">Seen Thu 4 Jun.</p>
+  <div class="frames"><figure class="cam"><img src="images/fox-willow.jpg" alt="Red fox by the willow — 4 Jun 2026, 01:32" loading="lazy"><figcaption><span class="fname">IMAG0670.JPG</span><span class="fdate">Red fox by the willow — 4 Jun 2026, 01:32</span></figcaption></figure></div>
+  
+  <details><summary>Visit log (2 files)</summary><ul class="log"><li><b>Thu 4 Jun</b> — IMAG0670.JPG 01:32:19, IMAG0671.JPG 01:32:19</li></ul>
+  <p class="note">A frame showing two visitors counts for both — six frames show a woodpigeon with something else.</p></details>
+</article>
+
+<section class="about">
+<h2>About the camera</h2>
+<p>The camera is a NatureSpy trail camera, nicknamed “NatureBinky”, watching the lawn, the willow and the gate at The Old Rectory, Manton. It ran from 16 May to 2 July 2026 — 48 days, 2,775 files. It fires in bursts of two, so one visit usually means two files.</p>
+<p>Half the triggers were empty — mostly cars passing on the road (219 files show a vehicle and nothing else). The worst run was the morning of 2 July: about 145 empty frames in a row, 08:21–09:54. Videos were far noisier than photos — 67.9% of them empty, against 42.3% of photos.</p>
+<p>No squirrel appeared at all in the 48 days, despite being an expected regular. The household — people, the dog and the cats — were caught often, but they are not shown here: this site is wildlife only.</p>
+</section>
+
+<section class="tips">
+<h2>Helping the visitors</h2>
+<ul>
+<li><b>Hedgehog</b> (a declining species): a leaf or log pile in a quiet corner; a shallow dish of water in dry spells; a little meaty cat food — not fish, and never milk — on autumn evenings; check long grass and bonfires before strimming or burning. A hedgehog house by the willow, where they were seen, is the one purchase that would genuinely help.</li>
+<li><b>Owl</b> (protected under the Wildlife and Countryside Act 1981): the garden already works for it. The one thing that genuinely helps is <b>no rodenticides</b> — poisoned prey kills owls. Keep the big tree and the willow it perches in.</li>
+<li><b>Muntjac</b> (non-native): enjoy the visits, don’t feed them.</li>
+<li><b>Roe deer, fox:</b> passing visitors — no action needed.</li>
+</ul>
+</section>
+
+<section class="caveats">
+<h2>Identification notes — read honestly</h2>
+<ul>
+<li>The owl species is unconfirmed: the early frames read as barn owl, the later ones as tawny. Tawny is the likelier garden owl.</li>
+<li>The hedgehog identifications are tentative — small, round, spiky shapes in night infrared.</li>
+<li>A few deer frames are ambiguous between roe and muntjac.</li>
+<li>The fox is night infrared only, and the song thrush is a tentative identification.</li>
+<li>Two very blurry frames from 30 May were once read as a possible badger; they are too unclear to claim, so no badger is listed.</li>
+<li>A video from 17 May was first read as a grey heron; watching the full clip shows only the household dog in the vegetation, so no heron is listed.</li>
+<li>Counts include frames where two visitors appear together — a frame with a woodpigeon and a blackbird counts for both.</li>
+</ul>
+</section>
+
+<footer>
+<p>Rendered from the classification of all 2,775 files (16 May – 2 July 2026). Photographs are trail-camera frames, cropped to the animal and resized; the camera’s own date stamp is replaced by the caption bar under each frame. Video clips are hosted on Google Drive and open in a new tab. Household captures are not shown.</p>
+<p>Rectory Naturecam · The Old Rectory, Manton</p>
+</footer>
+</main>
+<script>
+const q = document.getElementById('q');
+const cards = [...document.querySelectorAll('.species')];
+const nomatch = document.getElementById('nomatch');
+const fbtns = [...document.querySelectorAll('.filters button')];
+let group = 'all';
+function apply(){
+  const term = q.value.trim().toLowerCase();
+  let shown = 0;
+  cards.forEach(c => {
+    const okTerm = !term || c.dataset.search.includes(term);
+    const okGroup = group === 'all' || c.dataset.search.includes(group.toLowerCase());
+    const show = okTerm && okGroup;
+    c.style.display = show ? '' : 'none';
+    if (show) shown++;
+  });
+  nomatch.style.display = shown ? 'none' : 'block';
+  document.querySelectorAll('h2').forEach(h => {
+    if (h.id === 'regular' || h.id === 'unusual') {
+      const anyVisible = cards.some(c => c.style.display !== 'none' && c.dataset.search.includes(h.id));
+      h.style.display = anyVisible ? '' : 'none';
+    }
+  });
+}
+q.addEventListener('input', apply);
+fbtns.forEach(b => b.addEventListener('click', () => {
+  fbtns.forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  group = b.dataset.f;
+  apply();
+}));
+</script>
+</body>
+</html>
