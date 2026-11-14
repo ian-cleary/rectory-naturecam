@@ -5,68 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rectory Naturecam — wildlife on the trail camera at The Old Rectory</title>
 <meta name="description" content="Wildlife caught by the NatureSpy trail camera in the garden at The Old Rectory, Manton, 16 May – 2 July 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f6f1e7;--ink:#2e2a24;--green:#2f4f2f;--bark:#6b4a2f;--sage:#8a9a7b;--card:#fffdf6}
+/* Rectory Naturecam — visual system, Nov 2026 (Ian's brief):
+   Sonoma (terracotta, warm cream, wine) meets North Lincolnshire
+   (hedgerow green, wolds gold), Pacific NorthWest (deep pine, mist)
+   and North Scotland Scandi (pale wood, light, clean type).
+   Headings: Fraunces (characterful serif). Body: Inter (clean sans). */
+:root{
+  --paper:#f8f3e9; --card:#fffdf7; --wood:#f0e8d5;
+  --ink:#2b2a26; --muted:#6b6257;
+  --pine:#2e4a3a; --pine-deep:#243b2e;
+  --terra:#b4552d; --wine:#6e2f3c; --gold:#b98a2f;
+  --mist:#dfe4dd; --hairline:#ddd3bd;
+  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans:'Inter', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.55 Georgia,serif}
-a{color:var(--green)}
-.wrap{max-width:1060px;margin:0 auto;padding:0 18px 60px}
-header.mast{background:var(--green);color:var(--cream);padding:34px 0 26px;border-bottom:5px solid var(--bark)}
-header.mast h1{margin:0;font:700 44px/1.05 Georgia,serif;letter-spacing:.5px}
-header.mast p{margin:8px 0 0;font-size:19px;opacity:.92}
-h2{font:700 30px/1.2 Georgia,serif;color:var(--green);border-bottom:3px solid var(--green);padding-bottom:6px;margin:44px 0 18px}
-h3{font:700 22px/1.3 Georgia,serif;color:var(--green);margin:26px 0 8px}
-.stats{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 6px}
-.stat{flex:1 1 180px;background:var(--card);border:2px solid var(--ink);border-radius:6px;padding:12px 14px;text-align:center}
-.stat b{display:block;font-size:30px;color:var(--green)}
-.stat span{font-size:14px}
-.searchbox{margin:26px 0 6px}
-.searchbox input{width:100%;font:18px Georgia,serif;padding:14px 16px;border:2px solid var(--ink);border-radius:8px;background:var(--card);color:var(--ink)}
-.searchbox p{margin:6px 2px 0;font-size:14px;color:#5a5245}
-.filters{display:flex;gap:8px;margin:14px 0 4px}
-.filters button{font:16px Georgia,serif;padding:8px 16px;border:2px solid var(--ink);border-radius:20px;background:var(--card);cursor:pointer}
-.filters button.on{background:var(--green);color:var(--cream)}
-#nomatch{display:none;font-size:18px;padding:18px;background:var(--card);border:2px solid var(--ink);border-radius:6px;margin:18px 0}
-.hero{margin:26px 0 6px}
-.cam{margin:0 0 14px;border:2px solid var(--ink);border-radius:6px;overflow:hidden;background:#111}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)}
+a{color:var(--pine);text-underline-offset:2px}
+a:hover{color:var(--terra)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px 64px}
+header.mast{background:var(--pine);color:#f8f3e9;padding:46px 0 36px;border-bottom:4px solid var(--terra)}
+header.mast .eyebrow{margin:0 0 12px;font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+header.mast h1{margin:0;font:700 46px/1.02 var(--serif);letter-spacing:.2px}
+header.mast p{margin:12px 0 0;font-size:18px;line-height:1.5;opacity:.93;max-width:660px}
+h2{font:700 32px/1.15 var(--serif);color:var(--pine);border-bottom:2px solid var(--terra);padding-bottom:10px;margin:54px 0 20px}
+h3{font:700 24px/1.25 var(--serif);color:var(--pine);margin:28px 0 10px}
+.stats{display:flex;flex-wrap:wrap;margin:28px 0 8px;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.stat{flex:1 1 180px;padding:18px 14px;text-align:center}
+.stat + .stat{border-left:1px solid var(--hairline)}
+.stat b{display:block;font:700 34px/1 var(--serif);color:var(--pine)}
+.stat span{display:block;margin-top:7px;font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.searchbox{margin:30px 0 6px}
+.searchbox input{width:100%;font:16px var(--sans);padding:14px 16px;border:1px solid var(--hairline);border-radius:10px;background:var(--card);color:var(--ink)}
+.searchbox input:focus{outline:2px solid var(--terra);outline-offset:1px;border-color:var(--terra)}
+.searchbox p{margin:8px 2px 0;font-size:14px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.filters button{font:600 15px var(--sans);padding:9px 18px;border:1px solid var(--pine);border-radius:999px;background:transparent;color:var(--pine);cursor:pointer}
+.filters button.on{background:var(--pine);color:#f8f3e9}
+.filters button:hover{border-color:var(--terra);color:var(--terra)}
+.filters button.on:hover{background:var(--terra);border-color:var(--terra);color:#f8f3e9}
+#nomatch{display:none;font-size:17px;padding:18px;background:var(--card);border:1px solid var(--hairline);border-radius:10px;margin:18px 0}
+.hero{margin:28px 0 6px}
+.cam{margin:0 0 14px;border:1px solid var(--hairline);border-radius:10px;overflow:hidden;background:#111}
 .cam img{display:block;width:100%;height:auto}
-.cam figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;background:var(--ink);color:var(--cream);padding:8px 12px;font-size:14px}
+.cam figcaption{display:flex;flex-wrap:wrap;gap:4px 14px;background:var(--pine-deep);color:#f8f3e9;padding:9px 12px;font-size:14px}
 .cam figcaption .fname{font-weight:700}
-.story{background:var(--green);color:var(--cream);border-radius:8px;padding:22px 22px 10px;margin:26px 0}
-.story h3{color:var(--cream);margin-top:0}
-.story .cam{border-color:var(--cream)}
+.story{background:var(--wood);border-top:4px solid var(--terra);border-radius:0 0 12px 12px;padding:26px 26px 14px;margin:30px 0}
+.story .kicker{margin:0 0 6px;font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--terra)}
+.story h3{color:var(--pine);margin:0 0 10px;font-size:28px}
+.story p{margin:0 0 14px}
+.story .cam{border-color:#fffdf7}
 .story .frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.species{background:var(--card);border:2px solid var(--ink);border-radius:8px;margin:0 0 22px;overflow:hidden}
-.species>header{display:flex;align-items:center;gap:14px;background:var(--plate);color:#fff;padding:12px 16px}
-.species>header .glyph{flex:0 0 74px;width:74px;height:56px;background:var(--cream);border:2px solid var(--ink);border-radius:6px;padding:4px}
+.species{background:var(--card);border:1px solid var(--hairline);border-radius:12px;margin:0 0 24px;overflow:hidden;box-shadow:0 1px 3px rgba(43,42,38,.06)}
+.species>header{display:flex;align-items:center;gap:14px;background:var(--plate);color:#fff;padding:14px 18px}
+.species>header .glyph{flex:0 0 74px;width:74px;height:56px;background:var(--wood);border:1px solid rgba(255,255,255,.55);border-radius:8px;padding:4px}
 .species>header .glyph svg{width:100%;height:100%}
-.species>header .sname{flex:1;font-size:24px;font-weight:700}
-.species>header .sname .latin{font-size:15px;font-weight:400;opacity:.9}
-.species>header .count{font-size:14px;background:rgba(0,0,0,.28);border-radius:14px;padding:4px 10px;white-space:nowrap}
-.species .blurb,.species .dates,.species .caveat,.species .nophoto{padding:0 16px}
-.species .blurb{margin:14px 0 6px}
+.species>header .sname{flex:1;font:700 26px/1.15 var(--serif)}
+.species>header .sname .latin{font:italic 400 15px/1.3 var(--sans);opacity:.92}
+.species>header .count{font:600 13px var(--sans);background:rgba(0,0,0,.3);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.species .blurb,.species .dates,.species .caveat,.species .nophoto{padding:0 18px}
+.species .blurb{margin:16px 0 6px}
 .species .caveat{color:#8a5a00;font-style:italic;margin:4px 0}
-.species .dates{color:#5a5245;font-size:15px;margin:6px 0 12px}
-.species .frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;padding:0 16px}
+.species .dates{color:var(--muted);font-size:15px;margin:6px 0 12px}
+.species .frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;padding:0 18px}
 .species .frames .cam{margin:0}
-.videos{padding:4px 16px 0}
-.videos h4{margin:10px 0 4px;color:var(--green)}
+.videos{padding:4px 18px 0}
+.videos h4{margin:12px 0 4px;color:var(--pine);font:700 17px var(--serif)}
 .videos ul,.log{margin:4px 0 12px;padding-left:22px}
 .videos li,.log li{margin:3px 0}
-.species details{margin:0 16px 16px;border-top:1px solid #d8cfb8;padding-top:10px}
-.species details summary{cursor:pointer;font-weight:700;color:var(--green)}
-.species details .note{font-size:13px;color:#5a5245}
+.species details{margin:0 18px 18px;border-top:1px solid var(--hairline);padding-top:12px}
+.species details summary{cursor:pointer;font-weight:600;color:var(--pine)}
+.species details .note{font-size:13px;color:var(--muted)}
 .about p,.tips li,.caveats li{max-width:760px}
 .tips ul,.caveats ul{padding-left:22px}
-footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-size:14px;color:#5a5245}
-@media(max-width:640px){header.mast h1{font-size:32px}.species>header .sname{font-size:20px}.species>header .glyph{flex-basis:56px;width:56px;height:44px}}
-#gate{position:fixed;inset:0;background:var(--cream);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
-#gate .card{background:var(--card);border:2px solid var(--ink);border-radius:8px;max-width:420px;width:100%;padding:28px 26px;text-align:center}
-#gate h1{margin:0 0 6px;font:700 30px/1.1 Georgia,serif;color:var(--green)}
-#gate p{margin:0 0 18px;font-size:16px}
-#gate input{width:100%;font:18px Georgia,serif;padding:12px 14px;border:2px solid var(--ink);border-radius:8px;background:var(--cream);color:var(--ink);text-align:center}
-#gate button{margin-top:12px;font:18px Georgia,serif;padding:10px 26px;border:2px solid var(--ink);border-radius:20px;background:var(--green);color:var(--cream);cursor:pointer}
-#gate .err{display:none;margin:12px 0 0;color:#8a1f1f;font-weight:700}
+.tips li,.caveats li{margin:6px 0}
+footer.site{background:var(--pine);color:#e9e4d6;margin-top:56px}
+footer.site .wrap{padding:36px 20px 42px}
+footer.site p{margin:0 0 10px;font-size:14px;line-height:1.6}
+footer.site p:last-child{margin:0;font:600 12px/1.5 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#c8cdb9}
+@media(max-width:640px){
+  header.mast{padding:34px 0 26px}
+  header.mast h1{font-size:34px}
+  h2{font-size:27px}
+  .species>header .sname{font-size:21px}
+  .species>header .glyph{flex-basis:56px;width:56px;height:44px}
+  .stat + .stat{border-left:none}
+  .story{padding:20px 18px 8px}
+}
+#gate{position:fixed;inset:0;background:var(--paper);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+#gate .card{background:var(--card);border:1px solid var(--hairline);border-radius:14px;max-width:440px;width:100%;padding:34px 30px;text-align:center;box-shadow:0 8px 30px rgba(43,42,38,.12)}
+#gate h1{margin:0 0 8px;font:700 32px/1.1 var(--serif);color:var(--pine)}
+#gate p{margin:0 0 20px;font-size:16px;color:var(--muted)}
+#gate input{width:100%;font:16px var(--sans);padding:13px 14px;border:1px solid var(--hairline);border-radius:10px;background:var(--paper);color:var(--ink);text-align:center}
+#gate input:focus{outline:2px solid var(--terra);outline-offset:1px;border-color:var(--terra)}
+#gate button{margin-top:14px;font:600 17px var(--sans);padding:11px 30px;border:none;border-radius:999px;background:var(--terra);color:#fff;cursor:pointer}
+#gate button:hover{background:var(--pine)}
+#gate .err{display:none;margin:12px 0 0;color:#8a1f1f;font-weight:600}
 </style>
 </head>
 <body>
@@ -81,6 +119,7 @@ footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-s
 </div></div>
 <div id="site" hidden>
 <header class="mast"><div class="wrap" style="padding-bottom:0">
+<p class="eyebrow">The Old Rectory · Manton, North Lincolnshire</p>
 <h1>Rectory Naturecam</h1>
 <p>Wildlife on the trail camera in the garden at The Old Rectory, Manton — 16 May to 2 July 2026</p>
 </div></header>
@@ -110,6 +149,7 @@ footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-s
 <p id="nomatch">No visitors match that search.</p>
 
 <section class="story">
+<p class="kicker">Field notes</p>
 <h3>The big night — 17–18 June</h3>
 <p>The busiest night of the whole 48 days. Two owls on the lawn together at 23:37 — and the same two on the ground eighteen minutes later. A pheasant asleep on the lawn at 00:25. An owl in flight at 02:49. And at 04:19 a muntjac by the willow — chased off by the household dog a minute later.</p>
 <div class="frames">
@@ -306,11 +346,11 @@ footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-s
 </ul>
 </section>
 
-<footer>
+</main>
+<footer class="site"><div class="wrap">
 <p>Rendered from the classification of all 2,775 files (16 May – 2 July 2026). Photographs are trail-camera frames, cropped to the animal and resized; the camera’s own date stamp is replaced by the caption bar under each frame. Video clips are hosted on Google Drive and open in a new tab. Household captures are not shown.</p>
 <p>Rectory Naturecam · The Old Rectory, Manton</p>
-</footer>
-</main>
+</div></footer>
 </div>
 <script>
 // Password gate: the entered password is hashed (SHA-256, Web Crypto) and compared
