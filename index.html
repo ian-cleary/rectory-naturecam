@@ -60,9 +60,26 @@ h3{font:700 22px/1.3 Georgia,serif;color:var(--green);margin:26px 0 8px}
 .tips ul,.caveats ul{padding-left:22px}
 footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-size:14px;color:#5a5245}
 @media(max-width:640px){header.mast h1{font-size:32px}.species>header .sname{font-size:20px}.species>header .glyph{flex-basis:56px;width:56px;height:44px}}
+#gate{position:fixed;inset:0;background:var(--cream);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+#gate .card{background:var(--card);border:2px solid var(--ink);border-radius:8px;max-width:420px;width:100%;padding:28px 26px;text-align:center}
+#gate h1{margin:0 0 6px;font:700 30px/1.1 Georgia,serif;color:var(--green)}
+#gate p{margin:0 0 18px;font-size:16px}
+#gate input{width:100%;font:18px Georgia,serif;padding:12px 14px;border:2px solid var(--ink);border-radius:8px;background:var(--cream);color:var(--ink);text-align:center}
+#gate button{margin-top:12px;font:18px Georgia,serif;padding:10px 26px;border:2px solid var(--ink);border-radius:20px;background:var(--green);color:var(--cream);cursor:pointer}
+#gate .err{display:none;margin:12px 0 0;color:#8a1f1f;font-weight:700}
 </style>
 </head>
 <body>
+<div id="gate"><div class="card">
+<h1>Rectory Naturecam</h1>
+<p>Enter the password to look around.</p>
+<form id="gateform">
+<input id="gatepass" type="password" placeholder="Password" autocomplete="current-password" autofocus>
+<button type="submit">Enter</button>
+<p class="err" id="gateerr">Wrong password, try again.</p>
+</form>
+</div></div>
+<div id="site" hidden>
 <header class="mast"><div class="wrap" style="padding-bottom:0">
 <h1>Rectory Naturecam</h1>
 <p>Wildlife on the trail camera in the garden at The Old Rectory, Manton — 16 May to 2 July 2026</p>
@@ -309,7 +326,42 @@ footer{margin-top:44px;border-top:3px solid var(--green);padding-top:14px;font-s
 <p>Rectory Naturecam · The Old Rectory, Manton</p>
 </footer>
 </main>
+</div>
 <script>
+// Password gate: the entered password is hashed (SHA-256, Web Crypto) and compared
+// with the stored hash. A correct entry is remembered in sessionStorage for this
+// browser session only, so the gate does not ask again until the tab is closed.
+const PASS_HASH = '6a69685f79602aad29023f4e56b721f37ff28f669d5fa2390133af94c3cb2000';
+const gate = document.getElementById('gate');
+const site = document.getElementById('site');
+async function sha256hex(s){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+function unlock(){
+  gate.style.display = 'none';
+  site.hidden = false;
+}
+if (sessionStorage.getItem('naturecam-unlocked') === '1') { unlock(); }
+document.getElementById('gateform').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const inp = document.getElementById('gatepass');
+  const err = document.getElementById('gateerr');
+  if (!window.crypto || !crypto.subtle) {
+    err.textContent = 'This page needs to be viewed over a secure connection.';
+    err.style.display = 'block';
+    return;
+  }
+  const h = await sha256hex(inp.value);
+  if (h === PASS_HASH) {
+    sessionStorage.setItem('naturecam-unlocked', '1');
+    unlock();
+  } else {
+    err.style.display = 'block';
+    inp.value = '';
+    inp.focus();
+  }
+});
 const q = document.getElementById('q');
 const cards = [...document.querySelectorAll('.species')];
 const nomatch = document.getElementById('nomatch');
